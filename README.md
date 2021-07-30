@@ -18,24 +18,24 @@ GitHub Project Repository: https://github.com/naveen1994rai/library-booking-syst
       `$ git clone git@github.com:naveen1994rai/library-booking-system.git`
 
 2. Install the application dependencies with :
-  ## Server
+  #### Server
     `$ cd library-booking-system/server`
     `$ npm i`
     `$ nodemon index.js`
 
-  ## Client
+  #### Client
     `$ cd library-booking-system/client`
     `$ npm i`
     `$ npm start`
   
 3. Run the application :
-  ## Server (Port 3000)
+  #### Server (Port 3000)
     `$ cd library-booking-system/server && nodemon index.js`
 
-  ## Client (Port 8000)
+  #### Client (Port 8000)
     `$ cd library-booking-system/client && npm start`
 
-  ## Database (Port 27017)
+  #### Database (Port 27017)
     Open a new terminal and run `$ mongod`
 
 4. Access at http://localhost:8000 in your browser.
