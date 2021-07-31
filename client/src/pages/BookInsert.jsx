@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
-import api from '../api'
+import React, { Component } from 'react';
+import api from '../api';
+import Button from '../components/Button';
+//import CancelButton from '../components/CancelButton';
 
 import styled from 'styled-components'
 
@@ -22,18 +24,19 @@ const InputText = styled.input.attrs({
 })`
     margin: 5px;
 `
-
+/*
 const Button = styled.button.attrs({
     className: `btn btn-primary`,
 })`
     margin: 15px 15px 15px 5px;
-`
+
 
 const CancelButton = styled.a.attrs({
     className: `btn btn-danger`,
 })`
     margin: 15px 15px 15px 5px;
 `
+*/
 
 class BookInsert extends Component {
     constructor(props) {
@@ -111,8 +114,11 @@ class BookInsert extends Component {
                     onChange={this.handleChangeInputRating}
                 />
 
-                <Button onClick={this.handleIncludeBook}>Add Book</Button>
-                <CancelButton href={'/books/list'}>Cancel</CancelButton>
+                <Button type='primary'
+                    onPress={this.handleIncludeBook}
+                    tag='Add Book'
+                />
+                <Button type='secondary' href={'/books/list'} tag='Cancel' />
             </Wrapper>
         )
     }

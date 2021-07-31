@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactTable from 'react-table-6'
 import api from '../api'
+import Button from '../components/Button';
 
 import styled from 'styled-components'
 
@@ -9,7 +10,7 @@ import 'react-table-6/react-table.css'
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px;
 `
-
+/*
 const Update = styled.div`
     color: #ef9b0f;
     cursor: pointer;
@@ -18,23 +19,23 @@ const Update = styled.div`
 const Delete = styled.div`
     color: #ff0000;
     cursor: pointer;
-`
+`*/
 
 class UpdateBook extends Component {
     updateRequestedBook = event => {
-        event.preventDefault()
+        //event.preventDefault()
 
         window.location.href = `/book/update/${this.props.id}`
     }
 
     render() {
-        return <Update onClick={this.updateRequestedBook}>Update</Update>
+        return <Button type='secondary' onPress={this.updateRequestedBook} tag='Update' />
     }
 }
 
 class DeleteBook extends Component {
-    deleteRequestedBook = event => {
-        event.preventDefault();
+    deleteRequestedBook = () => {
+        //event.preventDefault();
 
         if (
             window.confirm(
@@ -47,7 +48,7 @@ class DeleteBook extends Component {
     }
 
     render() {
-        return <Delete onClick={this.deleteRequestedBook}>Delete</Delete>
+        return <Button type='primary' onPress={this.deleteRequestedBook} tag='Delete'/>
     }
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import api from '../api'
+import Button from '../components/Button';
 
 import styled from 'styled-components'
 
@@ -23,6 +24,7 @@ const InputText = styled.input.attrs({
     margin: 5px;
 `
 
+/*
 const Button = styled.button.attrs({
     className: `btn btn-primary`,
 })`
@@ -34,6 +36,7 @@ const CancelButton = styled.a.attrs({
 })`
     margin: 15px 15px 15px 5px;
 `
+*/
 
 class BookUpdate extends Component {
     constructor(props) {
@@ -123,8 +126,11 @@ class BookUpdate extends Component {
                     onChange={this.handleChangeInputRating}
                 />
 
-                <Button onClick={this.handleUpdateBook}>Update Book</Button>
-                <CancelButton href={'/books/list'}>Cancel</CancelButton>
+                <Button type='primary'
+                    onPress={this.handleUpdateBook}
+                    tag='Update Book'
+                />
+                <Button type='secondary' href={'/books/list'} tag='Cancel' />
             </Wrapper>
         )
     }
