@@ -3,7 +3,7 @@
 # Summary
 A library catalogue system built using the MERN stack to have some of your favourite books and rate them too.
 
-[![Screenshot-2021-05-02-at-6-26-27-PM.png](https://i.postimg.cc/jSRV3LRn/Screenshot-2021-05-02-at-6-26-27-PM.png)](https://postimg.cc/GHgSH38b)
+![Home](docs/Home.png)
 
 ## Links to GitHub Repository (Main Branch)
 GitHub Project Repository: https://github.com/naveen1994rai/library-booking-system
